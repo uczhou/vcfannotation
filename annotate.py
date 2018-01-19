@@ -83,7 +83,16 @@ def main():
     if len(sys.argv) == 1:
         print("Please specify the input file.")
         return
-    vcf_filepath = sys.argv[1]
+    elif len(sys.argv) > 3:
+        print("Too many arguments!")
+        return
+    elif len(sys.argv) == 2:
+        vcf_filepath = sys.argv[1]
+        outputpath = "annotated.vcf"
+    else:
+        vcf_filepath = sys.argv[1]
+        outputpath = sys.argv[2]
+        
     baseurl = "http://exac.hms.harvard.edu/rest/variant"
     # 1. Open cvf file and read cvf file content into dataframe
     df = vcfio.read_vcf(vcf_filepath)
@@ -143,8 +152,8 @@ def main():
                     format_meta.append(line)
                 elif line[2:6] != 'INFO':
                     other_meta.append(line)
-
-    vcfio.write_vcf("annotated.vcf", other_meta, info_meta, format_meta, df)
+                    
+    vcfio.write_vcf(outputpath, other_meta, info_meta, format_meta, df)
 
 
 if __name__ == "__main__":
