@@ -1,6 +1,6 @@
 ## Introduction
 This is a basic vcf annotation tool. The future version will be updated if possible. 
-Currently the tool only support the annotation based on http://exac.hms.harvard.edu RESTful API.
+Currently the tool only support the annotation based on http://exac.hms.harvard.edu RESTful API. The deleterious level of each variant is based on https://www.targetvalidation.org/variants.
 
 ## Usage:
 ### Annotate File
