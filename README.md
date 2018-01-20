@@ -16,7 +16,7 @@ Currently the tool only support the annotation based on http://exac.hms.harvard.
 
 argument: annotated file path
 
-## Annotation Items
+## Annotated Items
 1. DP: Total read depth at the locus
 2. AO: Alternate allele observations, with partial observations recorded fractionally
 3. AO_RO: Percentage of reads supporting the variant versus those supporting reference reads
