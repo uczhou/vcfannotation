@@ -4,16 +4,18 @@ Currently the tool only support the annotation based on http://exac.hms.harvard.
 
 ## Usage:
 ### Annotate File
-> **python annotate.py  argument1   [argument2]**
-
+```
+python annotate.py  argument1   [argument2]
+```
 1. argument1: input file path
 2. argument2: output file path
 3. input: vcf file
 4. output: annotated vcf file saved in current working directory with name 'annotated.vcf' in default.
 
 ### Check output file
-> **./checkfile.py  argument**
-
+```
+./checkfile.py  argument
+```
 argument: annotated file path
 
 ## Annotated Items
