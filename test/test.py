@@ -1,5 +1,5 @@
 import unittest
-import annotate
+from ..utils import annotate
 
 
 class TestAnnotate(unittest.TestCase):
