@@ -1,5 +1,5 @@
-import utils.vcfio as vcfio
-import utils.variantquery as variantquery
+from utils import vcfio
+from utils import variantquery
 import pandas
 from functools import reduce
 import sys
@@ -10,7 +10,7 @@ class Load:
     Load class used to create rank of consequence of variants
     """
     def __init__(self):
-        filepath = "consequence_of_variants.csv"
+        filepath = "consequence of variants.csv"
         df = pandas.read_csv(filepath)
         self.rank = dict()
         for i in range(df.shape[0]):
@@ -92,7 +92,7 @@ def main():
     else:
         vcf_filepath = sys.argv[1]
         outputpath = sys.argv[2]
-        
+
     baseurl = "http://exac.hms.harvard.edu/rest/variant"
     # 1. Open cvf file and read cvf file content into dataframe
     df = vcfio.read_vcf(vcf_filepath)
@@ -152,7 +152,7 @@ def main():
                     format_meta.append(line)
                 elif line[2:6] != 'INFO':
                     other_meta.append(line)
-                    
+
     vcfio.write_vcf(outputpath, other_meta, info_meta, format_meta, df)
 
 
